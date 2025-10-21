@@ -28,8 +28,7 @@ try {
     $stmt = $pdo->query('SELECT NOW() AS fecha_actual;');
     $fila = $stmt->fetch();
     echo "Conectado correctamente. Hora del servidor: " .
-    $fila['fecha_actual'];
-    echo "Hola curso del CEFIRE";
+    $fila['fecha_actual'] . "Hola curso del CEFIRE";
 } catch (PDOException $e) {
     error_log('Error de conexión PDO: ' . $e->getMessage());
     echo "Error al conectar con la base de datos: " .
